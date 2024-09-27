@@ -34,11 +34,17 @@ function MyButton(props)
         case 'yellow':
             myClassName += ` ${styles.yellow}`;
             break;
+        case 'gray':
+            myClassName += ` ${styles.gray}`;
+            break;
+        case 'white':
+            myClassName += ` ${styles.white}`;
+            break;
         default:
             myClassName += ` ${styles.black}`;
     }
     return (
-        <div className={myClassName}>
+        <div className={myClassName} {...props}>
             <p>{props.text}</p>
         </div>
     )
